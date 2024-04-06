@@ -7,7 +7,11 @@
  * @example [1, 2, 3] -> 6
 */
 function problem(numbers) {
-    return null;
+    let total = 0;
+    numbers.forEach((item) => {
+        total += item;
+    })
+    return total;
 }
 
 const tests = [

@@ -8,9 +8,16 @@
  * @example "racecar" -> true
 */
 function problem(str) {
-    return null;
+    let clean_string = ""
+    for (let i = 0; i<str.length; i++){
+        if (str[i] === " "){
+            continue;
+        }
+        clean_string += str[i].toLowerCase()
+    }
+    const reversed_string = clean_string.split('').reverse().join('');
+    return clean_string === reversed_string; 
 }
-
 const tests = [
     ["racecar", true],
     ["icssc", false],
